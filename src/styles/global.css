@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@import "simplebar/dist/simplebar.min.css";
+
+
+@theme {
+  --color-bg: #000000;
+  --color-text: #F5F5F5;
+  --color-accent: #FB923C;
+  --color-decor: #777777;
+  --color-hoverButton: #F97316;
+
+  --text-s: 12px;
+  --text-m:	14px;
+  --text-l:	16px;
+  --text-xl: 18px;
+  --text-xxl: 20px;
+  --text-xxxl: 24px;
+
+  --font-display: "Poppins", sans-serif;
+  --font-sans: "Poppins", sans-serif;
+}
+
+@font-face {
+  font-family: Poppins;
+  font-display: swap;
+  src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+html, body {
+  overscroll-behavior: none;
+}
+
