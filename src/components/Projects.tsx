@@ -4,7 +4,7 @@ function Projects() {
     const projects = [
         {
             path: project1,
-            content: "This is my first project This is my first project, this is my first project, this is my first project",
+            content: "This is my first project This is my first project, this is my first project, this is my first project ab",
         },
         {
             path: project1,
