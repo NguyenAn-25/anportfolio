@@ -11,17 +11,19 @@ type Props = {
 
 function Project({ path, content }: Props) {
     return (
-        <div className="flex flex-col gap-4 items-center py-8 w-64 px-5 h-112 border-2 border-accent">
+        <div className="flex gap-20 items-center py-8 w-full px-8 h-fit border-2 border-accent">
             <PcScreen path={path}></PcScreen>
-            <div className='w-48 h-0.5 bg-text'></div>
-            <SimpleBar style={{ maxHeight: 128 , width: 168}}>
-                <div className="text-text text-justify">
-                    {content}
+            {/* <div className='w-48 h-0.5 bg-text'></div> */}
+            <div className='flex flex-col gap-5'>
+                {/* <SimpleBar style={{ maxHeight: 128, width: "100%"}}> */}
+                    <div className="text-text text-justify">
+                        {content}
+                    </div>
+                {/* </SimpleBar> */}
+                <div className="flex gap-2">
+                    <Button path={github} content="repo"></Button>
+                    <Button path={screen} content="demo"></Button>
                 </div>
-            </SimpleBar>
-            <div className="flex gap-2">
-                <Button path={github} content="repo"></Button>
-                <Button path={screen} content="demo"></Button>
             </div>
         </div>
     )
