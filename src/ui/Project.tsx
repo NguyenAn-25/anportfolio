@@ -1,4 +1,3 @@
-import SimpleBar from 'simplebar-react';
 import Button from './Button';
 import PcScreen from './PcScreen';
 import github from "@/assets/svg/Github.svg";
