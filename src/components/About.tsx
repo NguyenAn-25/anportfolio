@@ -1,5 +1,6 @@
 import avatar from "@/assets/png/avatar.png"
-import LinkButton from "@/ui/LinkButton";
+import resume from "@/assets/pdf/resume.pdf"
+
 function About() {
     return (
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
@@ -10,10 +11,10 @@ function About() {
                 Hi there! <br />
                 I’m <span className="text-accent font-black">Nguyen Ngoc Thien An</span><br />
                 <span className="text-accent">Software Developer</span>
-                <div className="flex gap-1 items-center">
-                    <LinkButton content="resume"></LinkButton>
-                    <div className="text-2xl">|</div>
-                    <LinkButton content="github"></LinkButton>
+                <div className="flex gap-3 items-center">
+                    <a className="text-accent text-base" href={resume} target="_blank">Resume</a>
+                    <div className="bg-text w-px h-4"></div>
+                    <a className="text-accent text-base" href="https://github.com/NguyenAn-1703" target="_blank">Github</a>
                 </div>
             </div>
         </div>

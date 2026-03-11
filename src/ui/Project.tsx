@@ -14,11 +14,9 @@ function Project({ path, content }: Props) {
             <PcScreen path={path}></PcScreen>
             {/* <div className='w-48 h-0.5 bg-text'></div> */}
             <div className='flex flex-col gap-5'>
-                {/* <SimpleBar style={{ maxHeight: 128, width: "100%"}}> */}
                     <div className="text-text text-justify">
                         {content}
                     </div>
-                {/* </SimpleBar> */}
                 <div className="flex gap-2">
                     <Button path={github} content="repo"></Button>
                     <Button path={screen} content="demo"></Button>
