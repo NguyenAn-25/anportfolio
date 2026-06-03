@@ -20,10 +20,13 @@ function Project({ path, title, content, tech }: Props) {
                 <div className="text-text text-2xl font-bold text-center lg:text-start md:text-3xl">
                     {title}
                 </div>
-                <div>
+                <div className='space-y-2'>
                     {content.split('\n').map((c) => (
-                        <div className="text-text text-justify">
-                            {c}
+                        <div className="text-text text-justify flex items-start gap-2">
+                            <span className="text-accent text-2xl select-none">•</span>
+
+                            {/* Phần nội dung chữ */}
+                            <span className="flex-1">{c}</span>
                         </div>
                     ))}
                 </div>
