@@ -9,9 +9,14 @@ type Props = {
     title: string;
     content: string;
     tech: string[];
+    links?: {
+        type: string,
+        content: string,
+        link?: string
+    }[]
 }
 
-function Project({ path, title, content, tech }: Props) {
+function Project({ path, title, content, tech, links }: Props) {
     return (
         <div className="flex flex-col gap-20 items-center py-8 w-full px-8 h-fit border-2 border-accent lg:flex-row">
             <PcScreen path={path}></PcScreen>
@@ -37,11 +42,21 @@ function Project({ path, title, content, tech }: Props) {
                         ))
                     }
                 </div>
+                {
+                    links ?
+                        <div className="flex gap-2 justify-center lg:justify-start">{
+                            links.map(item => (
+                                <Button path={item.type === "github" ? github : screen} content={item.content} link={item.link}></Button>
+                            ))
+                        }
+                        </div>
+                        :
+                        <div className="flex gap-2 justify-center lg:justify-start">
+                            <Button path={github} content="repo"></Button>
+                            <Button path={screen} content="demo"></Button>
+                        </div>
+                }
 
-                <div className="flex gap-2 justify-center lg:justify-start">
-                    <Button path={github} content="repo"></Button>
-                    <Button path={screen} content="demo"></Button>
-                </div>
             </div>
         </div>
     )

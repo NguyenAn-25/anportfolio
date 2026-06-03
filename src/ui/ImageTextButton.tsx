@@ -5,7 +5,7 @@ type Props = {
 }
 function ImageTextButton({imagePath ,content, path}: Props){
     return(
-        <a href={path} className="cursor-pointer flex justify-center gap-2 rounded py-2 text-accent">
+        <a href={path} target="_blank" className="cursor-pointer flex justify-center gap-2 rounded py-2 text-accent">
             <div className="w-3 flex justify-center">
                 <img src={imagePath} className="select-none" />
             </div>
