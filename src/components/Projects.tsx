@@ -24,7 +24,7 @@ function Projects() {
         // },
     ];
     return (
-        <div className="flex flex-col items-center gap-8 w-full px-48">
+        <div className="flex flex-col items-center gap-8 w-full md:px-10">
             <div className="text-2xl font-black text-accent md:text-4xl">Projects</div>
             <div className="flex flex-col items-center gap-8 w-full">
                 {projects.map(item => (<Project path={item.path} title={item.title} content={item.content} tech={item.tech}></Project>))}

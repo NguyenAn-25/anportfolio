@@ -13,11 +13,11 @@ type Props = {
 
 function Project({ path, title, content, tech }: Props) {
     return (
-        <div className="flex gap-20 items-center py-8 w-full px-8 h-fit border-2 border-accent">
+        <div className="flex flex-col gap-20 items-center py-8 w-full px-8 h-fit border-2 border-accent lg:flex-row">
             <PcScreen path={path}></PcScreen>
             {/* <div className='w-48 h-0.5 bg-text'></div> */}
             <div className='flex flex-col gap-5'>
-                <div className="text-text text-3xl font-bold">
+                <div className="text-text text-2xl font-bold text-center lg:text-start md:text-3xl">
                     {title}
                 </div>
                 <div>
@@ -27,7 +27,7 @@ function Project({ path, title, content, tech }: Props) {
                         </div>
                     ))}
                 </div>
-                <div className='flex gap-2'>
+                <div className='flex gap-2 justify-center lg:justify-start'>
                     {
                         tech.map(item => (
                             <TechTag content={item}></TechTag>
@@ -35,7 +35,7 @@ function Project({ path, title, content, tech }: Props) {
                     }
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex gap-2 justify-center lg:justify-start">
                     <Button path={github} content="repo"></Button>
                     <Button path={screen} content="demo"></Button>
                 </div>
